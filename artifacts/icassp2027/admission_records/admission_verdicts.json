@@ -1,0 +1,49 @@
+{
+  "protocol": "Regression-aware Model Admission (g_RA)",
+  "admission_rules": {
+    "weak4_reduction_threshold_pct": 5.0,
+    "non_target_regression_guard_pct": 2.0,
+    "canonical_hard_redline_deg": 5.0
+  },
+  "candidates": {
+    "seed42_targeted": {
+      "training_seed": 42,
+      "arm": "targeted",
+      "base_weak4_rot_deg": 112.231,
+      "candidate_weak4_rot_deg": 38.835,
+      "weak4_reduction_pct": 65.39,
+      "canonical_rot_deg": 4.382,
+      "canonical_redline_satisfied": true,
+      "non_target_guard_satisfied": true,
+      "verdict": "PROMOTE"
+    },
+    "seed43_targeted": {
+      "training_seed": 43,
+      "arm": "targeted",
+      "base_weak4_rot_deg": 112.231,
+      "candidate_weak4_rot_deg": 33.817,
+      "weak4_reduction_pct": 69.86,
+      "canonical_rot_deg": 4.195,
+      "canonical_redline_satisfied": true,
+      "non_target_guard_satisfied": true,
+      "verdict": "PROMOTE"
+    },
+    "seed44_targeted": {
+      "training_seed": 44,
+      "arm": "targeted",
+      "base_weak4_rot_deg": 112.231,
+      "candidate_weak4_rot_deg": 33.848,
+      "weak4_reduction_pct": 69.84,
+      "canonical_rot_deg": 4.251,
+      "canonical_redline_satisfied": true,
+      "non_target_guard_satisfied": true,
+      "verdict": "PROMOTE"
+    }
+  },
+  "summary": {
+    "total_evaluated": 3,
+    "promote_count": 3,
+    "rollback_count": 0,
+    "final_verdict": "PROMOTE 3/3"
+  }
+}

@@ -1,0 +1,96 @@
+schema_version: datarsi.r1_round_admission.v1
+freeze_status: BLOCKED_DECISIONS_REQUIRED
+frozen_before_r1_outcome_access: false
+rule_id: g_RA
+
+recovered_fixed_semantics:
+  candidate_arm: DataRSI+M
+  comparison_baseline: R0
+  attribution_only_arm: Random+M
+  random_enters_promotion_decision: false
+  primary_metric:
+    name: vggt_relative_rotation_geodesic_error_deg
+    direction: lower_is_better
+    failure_penalty: 180.0
+  pair_and_seed_aggregation:
+    pair_seed_mean: e_bar_p = mean_{s in [42,43,44]} e_{p,s}
+    primary: median_{p in frozen_288_validation_pairs} e_bar_p
+    prohibited: mean_of_seed_level_medians
+  descriptive_seed_variability:
+    definition: m_s = median_p e_{p,s}
+    role: descriptive_only_not_confidence_interval
+  weak4:
+    source: R0 frozen Validation
+    cell_space: 32 azimuth_elevation cells
+    distance_handling: aggregate the three distances before cell ordering
+    count: 4
+    final_current_binding: null
+    decision_id: RA-01
+  frozen_worst_cell:
+    definition: null
+    decision_id: RA-01
+  missing_and_failure_penalties:
+    rotation_error_deg: 180.0
+    CellAcc32: 0.0
+    DistAcc3: 0.0
+    target_dino: 0.0
+    paired_lpips: 1.0
+    output_failure: true
+  DistAcc3_role: report_only
+  promotion_result: D0 union admitted_DataRSI_records
+  rollback_result: D0
+
+unresolved_rule:
+  utility_conditions:
+    weak4_threshold: null
+    worst_cell_threshold: null
+    overall_primary_threshold: null
+    decision_id: RA-02
+  protected_head_cells:
+    selection_rule: null
+    aggregation: null
+    threshold: null
+    decision_id: RA-03
+  fidelity_guards:
+    target_dino:
+      enabled: null
+      image_pair: null
+      spatial_region: null
+      crop_or_mask_policy: null
+      aggregation: null
+      threshold: null
+    lpips:
+      enabled: null
+      image_pair: null
+      spatial_region: null
+      crop_or_mask_policy: null
+      aggregation: null
+      threshold: null
+    decision_id: RA-04
+  other_guards:
+    identity_operand: null
+    scene_operand: null
+    output_validity_operand: null
+    thresholds: null
+    decision_id: RA-05
+  logic:
+    combination: null
+    equality_behavior: null
+    tie_handling: null
+    missing_condition_behavior: null
+    emitted_failure_reasons: null
+    decision_id: RA-06
+
+historical_nonbinding_reference:
+  source: configs/protocol.json smoke-only six-arm Branch A
+  weak4_gain_deg: 2.0
+  worst_gain_deg: 1.0
+  head_regression_deg: 2.0
+  dino_regression: 0.01
+  lpips_increase: 0.02
+  historical_head_azimuths: [0, 45, 315]
+  status: not_bound_to_current_GeometryFirst_R1
+
+verdict_schema: ../schemas/r1_round_admission_verdict.schema.json
+required_decisions: [RA-01, RA-02, RA-03, RA-04, RA-05, RA-06]
+

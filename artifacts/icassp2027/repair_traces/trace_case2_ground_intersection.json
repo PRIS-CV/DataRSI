@@ -1,0 +1,49 @@
+{
+  "case_id": "trace_case_02",
+  "request_id": "req_targeted_038",
+  "identity": "clock_004",
+  "coordinates": {
+    "azimuth_deg": 225,
+    "elevation_deg": -30,
+    "distance_m": 4.0
+  },
+  "initial_render": {
+    "checks": {
+      "bbox_margin": 0.054,
+      "mask_coverage": 0.014,
+      "visible_amodal_ray_ratio": 0.781,
+      "front_of_camera": true,
+      "mesh_intersection": true
+    },
+    "vlm_inspection": {
+      "defects": [
+        "ground_intersection"
+      ],
+      "evidence": "Base geometry slightly intersects with the support staging surface under pitch.",
+      "eligible_for_repair": true
+    },
+    "contract_pass": false
+  },
+  "repair_round_1": {
+    "attempt": 1,
+    "action": {
+      "action_type": "restage_lift",
+      "ev_boost": 0.0,
+      "lift_z_units": 0.25
+    },
+    "post_repair_checks": {
+      "bbox_margin": 0.058,
+      "mask_coverage": 0.015,
+      "visible_amodal_ray_ratio": 0.812,
+      "front_of_camera": true,
+      "mesh_intersection": false
+    },
+    "vlm_reinspection": {
+      "defects": [],
+      "evidence": "Support plane contact validated; no surface penetration detected.",
+      "eligible_for_repair": false
+    },
+    "contract_pass": true
+  },
+  "final_verdict": "RECOVERED_COMPLIANT"
+}

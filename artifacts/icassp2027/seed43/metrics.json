@@ -1,0 +1,23 @@
+{
+  "seed": 43,
+  "weak4_rot_deg": {
+    "base": 112.23,
+    "uniform": 49.79,
+    "targeted": 33.82,
+    "delta_t_minus_u": -15.97
+  },
+  "weak4_psnr_db": {
+    "base": 12.22,
+    "uniform": 13.95,
+    "targeted": 14.52,
+    "delta_t_minus_u": 0.57
+  },
+  "overall_lpips": {
+    "base": 0.2636,
+    "uniform": 0.203,
+    "targeted": 0.1984,
+    "delta_t_minus_u": -0.0046
+  },
+  "canonical_rot_deg": 4.195,
+  "verdict": "PROMOTE"
+}

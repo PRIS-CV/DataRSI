@@ -1,0 +1,8 @@
+# Targeted-72 Allocation Configuration
+arm: "targeted"
+budget: 72
+target_slices: "Weak-4"
+identities_count: 6
+distances_count: 3
+total_requests: 72
+description: "Allocates all 72 requests into diagnosed Weak-4 cells across 6 identities and 3 orbit distances."

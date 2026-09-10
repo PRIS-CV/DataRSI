@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software or benchmark artifacts, please cite it as below."
+title: "DataRSI: A 3D Data Harness for Failure-to-Data Evolution"
+authors:
+  - family-names: "Zhang"
+    given-names: "Qisong"
+  - family-names: "Wu"
+    given-names: "Wenzhuo"
+  - family-names: "Jia"
+    given-names: "Zhuangzhuang"
+  - family-names: "Yang"
+    given-names: "Yunhao"
+  - family-names: "Zhang"
+    given-names: "Shuo"
+  - family-names: "Zhang"
+    given-names: "Huayu"
+  - family-names: "Zang"
+    given-names: "Xianghao"
+  - family-names: "He"
+    given-names: "Zhixiang"
+  - family-names: "He"
+    given-names: "Zhongjiang"
+  - family-names: "Liang"
+    given-names: "Kongming"
+  - family-names: "Ma"
+    given-names: "Zhanyu"
+preferred-citation:
+  type: conference-paper
+  title: "DataRSI: A 3D Data Harness for Failure-to-Data Evolution"
+  conference:
+    name: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+  year: 2027

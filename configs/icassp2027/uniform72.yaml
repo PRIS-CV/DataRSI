@@ -1,0 +1,8 @@
+# Uniform-72 Allocation Configuration
+arm: "uniform"
+budget: 72
+target_slices: "Uniform across 12 cells"
+identities_count: 6
+distances_count: 1
+total_requests: 72
+description: "Allocates 72 requests uniformly across 12 distinct azimuth-elevation cells for 6 identities."
