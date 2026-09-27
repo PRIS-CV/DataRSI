@@ -4,248 +4,100 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DataRSI: A 3D Data Harness for Failure-to-Data Evolution (ICASSP 2027)</title>
-  <meta name="description" content="DataRSI: A 3D Data Harness for Failure-to-Data Evolution. ICASSP 2027 paper project page.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
     code, pre { font-family: 'JetBrains Mono', monospace; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-indigo-100 selection:text-indigo-900">
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col justify-between antialiased selection:bg-indigo-500 selection:text-white">
 
-  <!-- Header / Hero -->
-  <header class="py-16 px-4 max-w-5xl mx-auto text-center">
-    <div class="inline-block px-3 py-1 bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-semibold rounded-full uppercase tracking-wider mb-4">
-      IEEE ICASSP 2027
-    </div>
-    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 mb-6 max-w-4xl mx-auto leading-tight">
-      DataRSI: A 3D Data Harness for Failure-to-Data Evolution
-    </h1>
-    
-    <div class="text-sm sm:text-base text-slate-700 font-medium mb-3 flex flex-wrap justify-center gap-x-3 gap-y-1 max-w-3xl mx-auto">
-      <span>Qisong Zhang<sup>1,*</sup></span>
-      <span>Wenzhuo Wu<sup>1,*</sup></span>
-      <span>Zhuangzhuang Jia<sup>1</sup></span>
-      <span>Yunhao Yang<sup>1</sup></span>
-      <span>Shuo Zhang<sup>1</sup></span>
-      <span>Huayu Zhang<sup>2</sup></span>
-      <span>Xianghao Zang<sup>2</sup></span>
-      <span>Zhixiang He<sup>2</sup></span>
-      <span>Zhongjiang He<sup>2,†</sup></span>
-      <span>Kongming Liang<sup>1,‡</sup></span>
-      <span>Zhanyu Ma<sup>1</sup></span>
-    </div>
-    
-    <div class="text-xs sm:text-sm text-slate-500 mb-8">
-      <sup>1</sup> School of Artificial Intelligence, Beijing University of Posts and Telecommunications (BUPT)<br>
-      <sup>2</sup> Institute of Artificial Intelligence (TeleAI), China Telecom<br>
-      <span class="text-slate-400 mt-1 inline-block">* Equal contribution. † Project lead. ‡ Corresponding author.</span>
-    </div>
-
-    <!-- Buttons -->
-    <div class="flex flex-wrap justify-center gap-3">
-      <a href="https://github.com/PRIS-CV/DataRSI" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-900 text-white font-medium text-sm hover:bg-slate-800 transition shadow-sm">
-        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-        Code & Artifacts
-      </a>
-      <a href="https://github.com/PRIS-CV/DataEvolver" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-700 font-medium text-sm hover:bg-slate-50 transition shadow-sm">
-        <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-        DataEvolver Project
-      </a>
-      <a href="#reproduction" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-indigo-600 text-white font-medium text-sm hover:bg-indigo-700 transition shadow-sm">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        Reproduce (< 30s)
-      </a>
-      <a href="#bibtex" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white border border-slate-300 text-slate-700 font-medium text-sm hover:bg-slate-50 transition shadow-sm">
-        BibTeX
-      </a>
+  <!-- Header -->
+  <header class="w-full border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="font-extrabold text-xl tracking-tight bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">DataRSI</span>
+        <span class="text-xs px-2 py-0.5 rounded-full font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/60">ICASSP 2027</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/PRIS-CV/DataRSI" target="_blank" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors bg-slate-100 hover:bg-slate-200/80 px-3 py-1.5 rounded-lg border border-slate-200">
+          <i class="fa-brands fa-github text-sm"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Teaser / Figure 1 -->
-  <section class="max-w-5xl mx-auto px-4 mb-16">
-    <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-200">
-      <img src="assets/datarsi_framework.png" alt="DataRSI Method Architecture" class="w-full h-auto rounded-lg">
-      <p class="mt-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
-        <strong>Figure 1: DataRSI as an automated 3D data harness.</strong> The Data Self-Evolution Loop (orange) inspects, repairs, and admits 3D supervision; the Failure-to-Data Feedback interface compiles downstream diagnostic evidence into registered requests; the Model Admission Loop (blue) trains candidate updates and applies regression guards to promote or roll back the champion state within one bounded revision.
-      </p>
-    </div>
-  </section>
+  <!-- Main Hero Content -->
+  <main class="flex-grow flex items-center justify-center px-4 py-16 sm:py-24">
+    <div class="max-w-3xl w-full mx-auto text-center">
+      
+      <!-- Conference Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs sm:text-sm font-medium mb-6 shadow-sm">
+        <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
+        <span>IEEE ICASSP 2027</span>
+      </div>
 
-  <!-- Abstract -->
-  <section class="max-w-4xl mx-auto px-4 mb-16">
-    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-      <h2 class="text-2xl font-bold text-slate-900 mb-4">Abstract</h2>
-      <p class="text-slate-700 leading-relaxed text-justify">
-        Many existing 3D synthetic-data pipelines remain recipe-driven: they neither inspect sample defects, repair generation failures, nor convert downstream model weaknesses into subsequent data construction. We propose <strong>DataRSI</strong>, an automated 3D data harness that treats synthetic supervision as an explicit revision state and organizes dataset evolution into auditable bounded revisions. In this framework, frozen model failures are compiled into executable 3D synthesis requests; candidate supervision is gated before entering training, and candidate model revisions are gated before replacing the champion. DataRSI couples a generation-time Data Self-Evolution Loop (multimodal inspection, bounded environment repair, deterministic Sample Contract) with a post-training Model Admission Loop (frozen validation profiling, regression-aware admission) through an explicit failure-to-data interface. We instantiate DataRSI on camera-controlled editing over a structured 3D factor space. Under a matched 72-request budget, failure-directed allocation reduces diagnosed Weak-4 rotation error by 14.950 ± 1.097° over uniform allocation across three seeds (PSNR +0.543 ± 0.023 dB); non-target error remains substantially below Base (34.64° vs. 64.13°), while overall rotation changes by only +0.205 ± 0.125°. All three targeted candidates satisfy frozen regression guards and are promoted. Under this protocol, an audit confirms executable 3D sample repair on matching requests, while historical adaptation establishes task feasibility. Together, these controlled studies audit the key transitions of one bounded revision.
-      </p>
-    </div>
-  </section>
+      <!-- Title -->
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+        DataRSI: A 3D Data Harness for Failure-to-Data Evolution
+      </h1>
 
-  <!-- Core Method Contributions -->
-  <section class="max-w-4xl mx-auto px-4 mb-16">
-    <h2 class="text-2xl font-bold text-slate-900 mb-6">Methodological Principles</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-        <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold mb-4">1</div>
-        <h3 class="font-bold text-slate-900 mb-2">Data Revision Abstraction</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          Synthetic supervision is treated as an explicit revision state governed by an immutable protocol Γ. Each bounded transaction starts from a frozen champion.
+      <!-- Authors & Affiliations -->
+      <div class="text-sm sm:text-base text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p class="font-medium text-slate-800">
+          Qisong Zhang$^{1,*}$, Wenzhuo Wu$^{1,*}$, Zhuangzhuang Jia$^1$, Yunhao Yang$^1$, Shuo Zhang$^1$, Huayu Zhang$^2$, Xianghao Zang$^2$, Zhixiang He$^2$, Zhongjiang He$^{2,\dagger}$, Kongming Liang$^{1,\ddagger}$, Zhanyu Ma$^1$
+        </p>
+        <p class="text-xs sm:text-sm text-slate-500 mt-2">
+          $^{1}$Beijing University of Posts and Telecommunications (BUPT) &nbsp;&middot;&nbsp; $^{2}$Institute of Artificial Intelligence (TeleAI), China Telecom
         </p>
       </div>
-      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-        <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold mb-4">2</div>
-        <h3 class="font-bold text-slate-900 mb-2">Failure-to-Data Interface</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          Downstream model failures over structured factor space are localized into Weak-4 slices and compiled into registered 3D requests that synthesize new supervision.
-        </p>
+
+      <!-- Coming Soon Announcement Card -->
+      <div class="bg-white rounded-2xl border border-indigo-100 shadow-xl shadow-indigo-100/50 p-8 sm:p-12 mb-10 text-center relative overflow-hidden">
+        <div class="absolute -top-12 -right-12 w-44 h-44 bg-indigo-50 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="absolute -bottom-12 -left-12 w-44 h-44 bg-violet-50 rounded-full blur-2xl pointer-events-none"></div>
+        
+        <div class="relative z-10">
+          <div class="w-16 h-16 bg-gradient-to-tr from-indigo-600 to-violet-600 text-white rounded-2xl mx-auto flex items-center justify-center text-2xl shadow-lg shadow-indigo-200 mb-5">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Code Will Come Soon</h2>
+          <p class="text-slate-600 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
+            The official codebase, experimental configurations, 3D data harness protocols, and reproduction artifacts are currently being prepared for open-source release. Please stay tuned!
+          </p>
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a href="https://github.com/PRIS-CV/DataRSI" target="_blank" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow transition-all duration-150">
+              <i class="fa-brands fa-github"></i>
+              <span>Follow on GitHub</span>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-        <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold mb-4">3</div>
-        <h3 class="font-bold text-slate-900 mb-2">Two-Level Revision Control</h3>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          Candidate data is gated by a deterministic Sample Contract (with bounded repair), while candidate models must pass regression guards before champion replacement.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Controlled Results (Table 3 & Fig 3) -->
-  <section class="max-w-4xl mx-auto px-4 mb-16">
-    <h2 class="text-2xl font-bold text-slate-900 mb-4">Controlled Study: Uniform-72 vs. Targeted-72</h2>
-    <p class="text-slate-600 mb-6">
-      Under an identical matched budget of 72 synthesis requests across seeds 42, 43, 44, failure-directed allocation produces consistent geometric rotation improvements on diagnosed weak slices.
-    </p>
-
-    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mb-6">
-      <img src="assets/matched_budget_results.png" alt="Figure 3 Weak-4 Bar Charts" class="w-full h-auto rounded-lg mb-4">
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm text-left text-slate-700">
-          <thead class="text-xs uppercase bg-slate-100 text-slate-700 border-b">
-            <tr>
-              <th class="py-3 px-4">Metric</th>
-              <th class="py-3 px-4">Base</th>
-              <th class="py-3 px-4">Uniform-72</th>
-              <th class="py-3 px-4">Targeted-72</th>
-              <th class="py-3 px-4 text-indigo-600 font-bold">Targeted - Uniform Delta</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b">
-              <td class="py-3 px-4 font-semibold">Weak-4 Rotation Error (°) ↓</td>
-              <td class="py-3 px-4">112.23</td>
-              <td class="py-3 px-4">50.45 ± 2.15</td>
-              <td class="py-3 px-4 font-bold text-indigo-700">35.50 ± 3.23</td>
-              <td class="py-3 px-4 font-bold text-indigo-600">-14.950 ± 1.097° (wins 3/3 seeds)</td>
-            </tr>
-            <tr class="border-b">
-              <td class="py-3 px-4 font-semibold">Weak-4 PSNR (dB) ↑</td>
-              <td class="py-3 px-4">12.22</td>
-              <td class="py-3 px-4">13.88 ± 0.07</td>
-              <td class="py-3 px-4 font-bold text-indigo-700">14.43 ± 0.09</td>
-              <td class="py-3 px-4 font-bold text-indigo-600">+0.543 ± 0.023 dB</td>
-            </tr>
-            <tr>
-              <td class="py-3 px-4 font-semibold">Overall LPIPS ↓</td>
-              <td class="py-3 px-4">0.2636</td>
-              <td class="py-3 px-4">0.2058 ± 0.0028</td>
-              <td class="py-3 px-4 font-bold text-indigo-700">0.2014 ± 0.0030</td>
-              <td class="py-3 px-4 font-bold text-indigo-600">-0.0044 ± 0.0003</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Qualitative Comparisons -->
-  <section class="max-w-4xl mx-auto px-4 mb-16">
-    <h2 class="text-2xl font-bold text-slate-900 mb-4">Qualitative Results</h2>
-    <div class="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <img src="assets/qualitative_results.png" alt="Qualitative Comparisons" class="w-full h-auto rounded-lg">
-      <p class="mt-4 text-xs sm:text-sm text-slate-600">
-        <strong>Figure 2: Qualitative camera-editing comparison on DataRSI-Bench.</strong> Top to bottom: rear angle (-45°, 0°), side angle (+270°, +30°), and lateral angle (+90°, 0°). DataRSI adheres strictly to requested camera perspectives.
-      </p>
-    </div>
-  </section>
-
-  <!-- Executable Repair Audit & Admission -->
-  <section class="max-w-4xl mx-auto px-4 mb-16 grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 class="text-lg font-bold text-slate-900 mb-3">Executable 3D Repair Audit</h3>
-      <p class="text-sm text-slate-600 mb-4 leading-relaxed">
-        Audited across 72 candidates at matching Weak-4 coordinates (independent Blender renders, distinct from Table 3 training pool):
-      </p>
-      <ul class="text-xs sm:text-sm space-y-2 text-slate-700">
-        <li>• <strong>Initial Pass / Fail</strong>: 29 / 43 (59.72% defect rate)</li>
-        <li>• <strong>Repair-Eligible Defects</strong>: 7 samples (exposure, collision)</li>
-        <li>• <strong>Successfully Recovered (≤ 2 rds)</strong>: <strong>2 samples</strong></li>
-        <li>• <strong>Final Compliant Supervision</strong>: 31 / 72 (43.06%)</li>
-      </ul>
-      <p class="mt-4 text-xs text-slate-500 italic">
-        Validates bounded physical restaging & radiometric adjustments without arbitrary manual tuning.
-      </p>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-      <h3 class="text-lg font-bold text-slate-900 mb-3">Regression-Aware Model Admission</h3>
-      <p class="text-sm text-slate-600 mb-4 leading-relaxed">
-        Candidate revisions are evaluated under frozen regression guards:
-      </p>
-      <ul class="text-xs sm:text-sm space-y-2 text-slate-700">
-        <li>• <strong>seed42</strong>: Weak reduction 65.39%, canonical 4.382° → <span class="text-emerald-700 font-bold">PROMOTE</span></li>
-        <li>• <strong>seed43</strong>: Weak reduction 69.86%, canonical 4.195° → <span class="text-emerald-700 font-bold">PROMOTE</span></li>
-        <li>• <strong>seed44</strong>: Weak reduction 69.84%, canonical 4.251° → <span class="text-emerald-700 font-bold">PROMOTE</span></li>
-        <li>• <strong>Final Gate Verdict</strong>: <span class="text-emerald-700 font-bold">3 / 3 PROMOTE</span></li>
-      </ul>
-      <p class="mt-4 text-xs text-slate-500 italic">
-        Canonical hard redline (< 5.000°) prevents champion replacement if core views degrade.
-      </p>
-    </div>
-  </section>
-
-  <!-- Reproduction Code -->
-  <section id="reproduction" class="max-w-4xl mx-auto px-4 mb-16">
-    <div class="bg-slate-900 text-slate-100 p-6 sm:p-8 rounded-2xl shadow-md">
-      <h2 class="text-xl font-bold text-white mb-3">Fast Reproduction (< 30 Seconds)</h2>
-      <p class="text-sm text-slate-400 mb-4">
-        Reviewers can verify all reported tables, deltas, and verdicts directly from audited artifacts without GPU or weight downloads:
-      </p>
-      <pre class="bg-slate-950 p-4 rounded-lg text-xs sm:text-sm text-emerald-400 overflow-x-auto"><code>git clone https://github.com/PRIS-CV/DataRSI.git
-cd DataRSI
-pip install -r requirements.txt
-
-# 1. Reproduce Table 1 & Table 3
-python scripts/reproduce_tables.py
-
-# 2. Verify 3/3 Model Admission Verdicts
-python scripts/reproduce_admission.py
-
-# 3. Inspect Executable Repair Audit
-python scripts/reproduce_repair_audit.py
-
-# 4. Verify Factor Space & Weak-4 Cells
-python scripts/reproduce_diagnosis.py</code></pre>
-    </div>
-  </section>
-
-  <!-- BibTeX -->
-  <section id="bibtex" class="max-w-4xl mx-auto px-4 mb-20">
-    <h2 class="text-xl font-bold text-slate-900 mb-3">Citation</h2>
-    <pre class="bg-white p-4 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-800 overflow-x-auto"><code>@inproceedings{zhang2027datarsi,
+      <!-- BibTeX Citation -->
+      <div class="text-left bg-slate-900 rounded-xl p-5 sm:p-6 text-slate-200 text-xs sm:text-sm shadow-md">
+        <div class="flex items-center justify-between mb-3 text-slate-400 font-medium">
+          <span>BibTeX Citation</span>
+        </div>
+        <pre class="overflow-x-auto text-indigo-300"><code>@inproceedings{zhang2027datarsi,
   title     = {DataRSI: A 3D Data Harness for Failure-to-Data Evolution},
   author    = {Zhang, Qisong and Wu, Wenzhuo and Jia, Zhuangzhuang and Yang, Yunhao and Zhang, Shuo and Zhang, Huayu and Zang, Xianghao and He, Zhixiang and He, Zhongjiang and Liang, Kongming and Ma, Zhanyu},
   booktitle = {IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
   year      = {2027}
 }</code></pre>
-  </section>
+      </div>
+
+    </div>
+  </main>
 
   <!-- Footer -->
-  <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-200">
-    <p>© 2026 DataRSI Contributors (PRIS-CV, BUPT & TeleAI). Built on DataEvolver's synthetic data infrastructure.</p>
+  <footer class="py-6 text-center text-xs text-slate-500 border-t border-slate-200 bg-white">
+    <p>&copy; 2026 PRIS-CV & TeleAI. All rights reserved.</p>
   </footer>
 
 </body>

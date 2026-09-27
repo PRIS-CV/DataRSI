@@ -1,5 +1,0 @@
-# Seed 43 Run Configuration
-seed: 43
-batch_size: 8
-steps: 2700
-checkpoint_tag: "seed43"
